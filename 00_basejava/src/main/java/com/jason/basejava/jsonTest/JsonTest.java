@@ -4,12 +4,21 @@ package com.jason.basejava.jsonTest;
 //import org.json.JSONException;
 //import org.json.JSONObject;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.jar.JarOutputStream;
 
 public class JsonTest {
+
+    @Autowired
+    private  ObjectMapper mapper;
 
     public static String BuildPerson() {
         // JSON格式数据解析对象
@@ -47,7 +56,24 @@ public class JsonTest {
         return map2.toString();
     }
 
+    public String test2() throws Exception{
+        String json = "{\"name\":\"lijz\",\"id\":10}";
+        JsonNode node = mapper.readTree(json);
+        String name = node.get("name").asText();
+        int id = node.get("id").asInt();
+        String res = "name: " + name + " ,id: " + id;
+        System.out.println(res);
+        return res;
+    }
+
     public static void main(String[] args) {
-       BuildPerson();
+      String str = BuildPerson();
+      System.out.println(str);
+
+      try {
+         new JsonTest().test2();
+      } catch (Exception e){
+          e.printStackTrace();
+      }
     }
 }

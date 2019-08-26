@@ -14,14 +14,17 @@
     <name>mydemo</name>
     <description>Demo project for Spring Boot</description>
 
+    <packaging>pom</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <modules>
+        <module>00_basejava</module>
         <module>01_hello</module>
         <module>02jpa</module>
         <module>03_redis</module>
+        <module>04_mybatis</module>
 
     </modules>
 
