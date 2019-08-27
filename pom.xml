@@ -25,7 +25,7 @@
         <module>02jpa</module>
         <module>03_redis</module>
         <module>04_mybatis</module>
-
+        <module>05_mybatis_multi</module>
     </modules>
 
     <build>

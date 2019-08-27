@@ -2,7 +2,7 @@ package com.jason.basejava.thread;
 
 import java.util.Date;
 
-public class Test {
+public class SleepTest {
 
     public static void main(String[] args) {
         for(int i =0; i< 10; i++){
