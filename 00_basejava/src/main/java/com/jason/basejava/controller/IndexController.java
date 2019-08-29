@@ -18,6 +18,16 @@ public class IndexController {
         return "Test index";
     }
 
+    /**
+     * 异常处理
+     * @return
+     */
+    @RequestMapping("/err")
+    public String errTest(){
+        int a = 1 / 0;
+        return "Test index";
+    }
+
     @RequestMapping("/getJson")
     @ResponseBody
     public JsonBean getJson(){

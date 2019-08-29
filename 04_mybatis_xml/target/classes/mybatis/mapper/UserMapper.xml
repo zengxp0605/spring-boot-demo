@@ -26,12 +26,12 @@
         WHERE id = #{id}
     </select>
 
-    <insert id="insert" parameterType="com.jason.mybatisxml.model.User">
+    <insert id="insert" parameterType="com.jason.mybatisxml.model.User" useGeneratedKeys="true" keyProperty="id">
        INSERT INTO
        		users
-       		(userName,passWord,user_sex)
+       		(userName,passWord,user_sex,nick_name)
        	VALUES
-       		(#{userName}, #{passWord}, #{userSex})
+       		(#{userName}, #{passWord}, #{userSex}, #{nickName})
     </insert>
 
     <update id="update" parameterType="com.jason.mybatisxml.model.User">
