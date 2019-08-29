@@ -16,14 +16,20 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+    @RequestMapping("/")
+    public List<User> home() {
+        return this.getUsers();
+    }
+
     @RequestMapping("/getUsers")
-    public List<User> getUsers(){
+    public List<User> getUsers() {
         List<User> users = userMapper.getAll();
         return users;
     }
+
     @RequestMapping("/getUser")
     public User getUser(Long id) {
-        User user=userMapper.getOne(id);
+        User user = userMapper.getOne(id);
         return user;
     }
 
@@ -32,12 +38,12 @@ public class UserController {
         userMapper.insert(user);
     }
 
-    @RequestMapping(value="update")
+    @RequestMapping(value = "update")
     public void update(User user) {
         userMapper.update(user);
     }
 
-    @RequestMapping(value="/delete/{id}")
+    @RequestMapping(value = "/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
         userMapper.delete(id);
     }

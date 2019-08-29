@@ -1,4 +1,4 @@
-package com.jason.basejava;
+package com.jason.basejava.others;
 
 import java.math.BigDecimal;
 
