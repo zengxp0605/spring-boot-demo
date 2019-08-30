@@ -10,9 +10,16 @@ public interface UserMapper {
 
     User getOne(Long id);
 
-    long insert(User user);
+    int insert(User user);
 
     void update(User user);
 
     void delete(Long id);
+
+    /**
+     * 用于多表查询测试
+     * @param id
+     * @return
+     */
+    User getAllFamilyByUserId(Long id);
 }

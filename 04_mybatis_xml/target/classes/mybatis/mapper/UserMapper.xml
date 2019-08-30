@@ -51,4 +51,26 @@
        WHERE
        		 id =#{id}
     </delete>
+
+    <!--  多表关联查询  -->
+    <select id="getAllFamilyByUserId" resultMap="AllFamilyMap">
+         select * from
+            users u
+         left join
+            user_family uf
+         on u.id=uf.user_id
+         where uf.user_id=#{id};
+    </select>
+
+    <resultMap id="AllFamilyMap" type="com.jason.mybatisxml.model.User">
+        <id column="id" property="id" jdbcType="BIGINT"></id>
+        <result column="userName" property="userName" jdbcType="VARCHAR" />
+        <result column="passWord" property="passWord" jdbcType="VARCHAR" />
+
+        <collection property="userFamilies" column="user_id" ofType="com.jason.mybatisxml.model.UserFamily">
+<!--            <id column="id" property="id"></id>-->
+            <result column="family_role" property="familyRole" jdbcType="VARCHAR"></result>
+            <result column="family_id" property="familyId" jdbcType="BIGINT"></result>
+        </collection>
+    </resultMap>
 </mapper>

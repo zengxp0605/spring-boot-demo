@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -18,6 +19,11 @@ public class User implements Serializable {
     private String passWord;
     private String nickName;
     private UserSexEnum userSex;
+
+    /**
+     * 多表关联时用到
+     */
+    private List<UserFamily> userFamilies;
 
     public User() {
         super();

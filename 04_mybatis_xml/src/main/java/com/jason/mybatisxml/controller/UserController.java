@@ -70,5 +70,14 @@ public class UserController {
         userMapper.delete(id);
     }
 
+    /**
+     * 多表关联查询测试
+     * @param id
+     */
+    @RequestMapping(value = "/getAllFamilyByUserId/{id}")
+    public User getAllFamilyByUserId(@PathVariable("id") Long id) {
+       return userMapper.getAllFamilyByUserId(id);
+    }
+
 }
 

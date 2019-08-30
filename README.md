@@ -14,6 +14,7 @@
   - 简单数据库连接,mybatis 注解的方式
 - 04_mybatis_xml
   - 简单数据库连接,mybatis xml配置sql的方式
+  - 含数据库事务/回滚的测试
   - TODO: 连表查询
 - 05_mybatis_multi
   - mybatis 多数据源(多个库)的连接方式
