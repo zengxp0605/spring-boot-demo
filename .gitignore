@@ -4,3 +4,5 @@
 .mvn
 .project
 .settings
+
+target/
