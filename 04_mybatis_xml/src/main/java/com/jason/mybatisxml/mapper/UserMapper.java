@@ -10,7 +10,7 @@ public interface UserMapper {
 
     User getOne(Long id);
 
-    int insert(User user);
+    long insert(User user);
 
     void update(User user);
 

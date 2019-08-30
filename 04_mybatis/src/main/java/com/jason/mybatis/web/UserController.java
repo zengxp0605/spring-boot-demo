@@ -34,8 +34,10 @@ public class UserController {
     }
 
     @RequestMapping("/add")
-    public void save(User user) {
-        userMapper.insert(user);
+    public String save(User user) {
+
+       long effRows = userMapper.insert(user);
+       return "Last uid: " + user.getId();
     }
 
     @RequestMapping(value = "update")

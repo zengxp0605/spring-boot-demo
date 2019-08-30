@@ -22,8 +22,9 @@ public interface UserMapper {
     })
     User getOne(Long id);
 
+    @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     @Insert("INSERT INTO users(userName,passWord,user_sex) VALUES(#{userName}, #{passWord}, #{userSex})")
-    void insert(User user);
+    long insert(User user);
 
     @Update("UPDATE users SET userName=#{userName},nick_name=#{nickName} WHERE id =#{id}")
     void update(User user);
