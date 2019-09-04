@@ -15,9 +15,13 @@
 - 04_mybatis_xml
   - 简单数据库连接,mybatis xml配置sql的方式
   - 含数据库事务/回滚的测试
-  - TODO: 连表查询
+  - 连表查询
 - 05_mybatis_multi
   - mybatis 多数据源(多个库)的连接方式
+
+- 06_groovy_tst
+  - 使用`groovy`写测试用例
+  - TODO: 调用数据库没有跑通
 
 
 ## 参考: 

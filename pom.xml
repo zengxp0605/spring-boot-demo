@@ -27,6 +27,7 @@
         <module>04_mybatis</module>
         <module>05_mybatis_multi</module>
         <module>04_mybatis_xml</module>
+        <module>06_groovy_tst</module>
     </modules>
 
     <build>
