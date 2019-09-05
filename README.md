@@ -24,6 +24,15 @@
   - 使用`groovy`写测试用例
   - TODO: 调用数据库没有跑通
 
+- 07_RabbitMQ
+  - 需要先安装[Erlang](https://www.erlang.org/downloads)
+    - 配置环境变量 ERLANG_HOME=E:\Program Files\erl9.0
+  - 再安装[RabbitMQ](https://www.rabbitmq.com/download.html)
+  - 启动RabbitMQ
+  - TODO:
+    - Topic Exchange: 可以根据 routing_key 自由的绑定不同的队列
+    - Fanout Exchange: 就是我们熟悉的广播模式或者订阅模式
+
 
 ## 参考: 
 - [Spring Boot 系列文章](http://www.ityouknow.com/spring-boot.html)  
