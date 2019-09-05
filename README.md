@@ -16,6 +16,7 @@
   - 简单数据库连接,mybatis xml配置sql的方式
   - 含数据库事务/回滚的测试
   - 连表查询
+  - 测试war包打包方式,放到tomcat下执行成功
 - 05_mybatis_multi
   - mybatis 多数据源(多个库)的连接方式
 
