@@ -1,6 +1,7 @@
 package com.jason.basejava;
 
 import com.jason.basejava.controller.IndexController;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,5 +41,14 @@ public class IndexControllerTests {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andReturn();
+    }
+
+    @Test
+    public void tmpTest() throws Exception{
+        String str = "test";
+        boolean isOk = str == "test" ? true : false;
+        System.out.println("res: " + isOk);
+        System.out.println("res2: " + str.equals("test"));
+        Assert.assertEquals(isOk, true);
     }
 }
