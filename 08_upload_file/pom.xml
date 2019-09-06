@@ -11,6 +11,8 @@
 
     <artifactId>08_upload_file</artifactId>
 
+    <packaging>war</packaging>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

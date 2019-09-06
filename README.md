@@ -33,6 +33,9 @@
     - Topic Exchange: 可以根据 routing_key 自由的绑定不同的队列
     - Fanout Exchange: 就是我们熟悉的广播模式或者订阅模式
 
+- 08_upload_file
+  - 配置最大上传文件不超过10MB
+  
 
 ## 参考: 
 - [Spring Boot 系列文章](http://www.ityouknow.com/spring-boot.html)  

@@ -23,8 +23,12 @@ public class UploadFileController {
     @Value("${uploadFile.tmpPath}")
     private String UPLOADED_FOLDER;
 
+    @Value("${spring.servlet.multipart.max-file-size}")
+    private String testOfConfigVal;
+
     @GetMapping("/upload")
     public String toUploadPage(){
+        System.out.println("testOfConfigVal: " + testOfConfigVal);
         return "upload";
     }
 
