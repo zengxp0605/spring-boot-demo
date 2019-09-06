@@ -30,6 +30,7 @@
         <module>06_groovy_tst</module>
         <module>07_RabbitMQ</module>
         <module>08_upload_file</module>
+        <module>09_rpc_dubbo</module>
     </modules>
 
     <build>

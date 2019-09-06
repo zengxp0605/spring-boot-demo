@@ -35,7 +35,13 @@
 
 - 08_upload_file
   - 配置最大上传文件不超过10MB
-  
+ 
+- 09_rpc_dubbo
+> (https://blog.csdn.net/alinyua/article/details/81019925)
+  - 先安装并启动 [zookeeper](http://mirrors.hust.edu.cn/apache/zookeeper/)
+  - `09_rpc_dubbo/dubbo-server` 服务提供者 `provider`
+  - `09_rpc_dubbo/dubbo-client` 服务消费者(web服务,api) `consumer`
+  - `09_rpc_dubbo/base-interface` 公开基础接口
 
 ## 参考: 
 - [Spring Boot 系列文章](http://www.ityouknow.com/spring-boot.html)  
