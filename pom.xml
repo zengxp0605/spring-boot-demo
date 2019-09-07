@@ -22,7 +22,7 @@
     <modules>
         <module>00_basejava</module>
         <module>01_hello</module>
-        <module>02jpa</module>
+        <module>02_jpa</module>
         <module>03_redis</module>
         <module>04_mybatis</module>
         <module>05_mybatis_multi</module>
@@ -31,6 +31,8 @@
         <module>07_RabbitMQ</module>
         <module>08_upload_file</module>
         <module>09_rpc_dubbo</module>
+        <module>10_mytask</module>
+        <module>0_project_template</module>
     </modules>
 
     <build>
