@@ -1,4 +1,4 @@
-package com.jason.basejava.thread;
+package com.jason.thread;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.jason.basejava.thread.guessNumber;
+package com.jason.thread.guessNumber;
 
 public class ThreadClassDemo {
 

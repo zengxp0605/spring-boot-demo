@@ -1,4 +1,4 @@
-package com.jason.basejava.thread.extendsdemo;
+package com.jason.thread.extendsdemo;
 
 
 public class TestThread {

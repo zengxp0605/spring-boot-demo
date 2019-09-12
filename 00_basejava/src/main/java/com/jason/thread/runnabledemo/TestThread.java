@@ -1,4 +1,4 @@
-package com.jason.basejava.thread.runnabledemo;
+package com.jason.thread.runnabledemo;
 
 public class TestThread {
 
