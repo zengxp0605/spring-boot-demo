@@ -4,10 +4,12 @@ import com.jason.mybatisxml.enums.UserSexEnum;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Accessors(chain = true) // 链式调用setter 方法
 @Getter
 @Setter
 @ToString

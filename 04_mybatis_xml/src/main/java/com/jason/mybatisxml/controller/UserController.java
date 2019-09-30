@@ -1,10 +1,12 @@
 package com.jason.mybatisxml.controller;
 
+import com.jason.mybatisxml.enums.UserSexEnum;
 import com.jason.mybatisxml.mapper.UserMapper;
 import com.jason.mybatisxml.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -79,5 +81,22 @@ public class UserController {
        return userMapper.getAllFamilyByUserId(id);
     }
 
+    /**
+     * Lombok 链式调用
+     *
+     * GetMapping 不指定value 则直接使用方法名
+     * @return
+     */
+    @GetMapping
+    public User getUserTest2(){
+        User user = new User();
+        user.setUserName("Zouzou")
+                .setNickName("Lover")
+                .setId(1000L)
+                .setPassWord("123456")
+                .setUserSex(UserSexEnum.WOMAN);
+        
+        return user;
+    }
 }
 
