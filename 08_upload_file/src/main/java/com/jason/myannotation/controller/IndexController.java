@@ -1,8 +1,7 @@
-package com.jason.controller;
+package com.jason.myannotation.controller;
 
 import com.jason.entity.Author;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

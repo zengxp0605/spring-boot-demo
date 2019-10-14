@@ -1,18 +1,20 @@
-## ¶Ë¿ÚºÅ
+## ç«¯å£å·
 server:
   port: 8081
 
-## Dubbo ·şÎñÌá¹©ÕßÅäÖÃ
+## Dubbo æœåŠ¡æä¾›è€…é…ç½®
 dubbo:
   application:
-    name: demo-provider # ·şÎñÃû
+    name: demo-provider # æœåŠ¡å
   registry:
-    address: zookeeper://127.0.0.1:2181 # ×¢²áÖĞĞÄµØÖ·
+    #address: zookeeper://127.0.0.1:2181 # æ³¨å†Œä¸­å¿ƒåœ°å€
+    address: 106.15.201.55:2181,106.15.201.55:2182,106.15.201.55:2183 # æ³¨å†Œä¸­å¿ƒåœ°å€
+    protocol: zookeeper
   protocol:
-    name: dubbo # Ö¸¶¨Í¨ĞÅĞ­Òé
-    port: 20880 # Í¨ĞÅ¶Ë¿Ú  ÕâÀïÖ¸µÄÊÇÓëÏû·ÑÕß¼äµÄÍ¨ĞÅĞ­ÒéÓë¶Ë¿Ú
+    name: dubbo # æŒ‡å®šé€šä¿¡åè®®
+    port: 20880 # é€šä¿¡ç«¯å£  è¿™é‡ŒæŒ‡çš„æ˜¯ä¸æ¶ˆè´¹è€…é—´çš„é€šä¿¡åè®®ä¸ç«¯å£
   provider:
-    timeout: 10000 # ÅäÖÃÈ«¾Öµ÷ÓÃ·şÎñ³¬Ê±Ê±¼ä£¬dubboÄ¬ÈÏÊÇ1s£¬¿Ï¶¨²»¹»ÓÃÑ½
-    retries: 3 # ÖØÊÔ3´Î
+    timeout: 10000 # é…ç½®å…¨å±€è°ƒç”¨æœåŠ¡è¶…æ—¶æ—¶é—´ï¼Œdubboé»˜è®¤æ˜¯1sï¼Œè‚¯å®šä¸å¤Ÿç”¨å‘€
+    retries: 3 # é‡è¯•3æ¬¡
     delay: -1
   scan: "com.jason.dubboserver.service"
