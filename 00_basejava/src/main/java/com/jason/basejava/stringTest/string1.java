@@ -4,12 +4,19 @@ package com.jason.basejava.stringTest;
 public class string1 {
 
     public static void main(String[] args) {
+        System.out.println("Math.round(-1.5) = " + Math.round(-1.5));
+        System.out.println("Math.round(-1.6) = " + Math.round(-1.6));
+        System.out.println("Math.round(1.5) = " + Math.round(1.5));
+
         // 字符串反转
         reverseString();
+
+        System.out.println("========================");
 
         /**  String 类的常用方法 */
         // 构造方法
         stringConstructor();
+
     }
 
     /**
@@ -46,5 +53,11 @@ public class string1 {
         String reverseStr = new StringBuffer(str).reverse().toString();
         System.out.println("字符串反转前: " + str);
         System.out.println("字符串反转后: " + reverseStr);
+
+        // StringBuilder reverse
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("abcdefg");
+        System.out.println(stringBuilder.reverse());
+
     }
 }
