@@ -33,7 +33,16 @@
         <module>09_rpc_dubbo</module>
         <module>10_mytask</module>
         <module>0_project_template</module>
+        <module>12-sleep-algorithm</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
