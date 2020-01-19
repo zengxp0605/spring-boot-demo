@@ -102,14 +102,14 @@ public class HeartRateAnalysis {
             List<HeartRatePO> newList = sortedTimeHrList.subList(start, end);
             boolean isDeep = isHrLowAndSteady(newList);
             logger.info("遍历数据: {},{},{}, {}", start, end, isDeep);
-            if(isDeep){
+            if (isDeep) {
                 int stime = newList.get(0).getMeasureTime();
                 int etime = newList.get(newList.size() - 1).getMeasureTime();
                 int[] arr = {stime, etime};
                 timeList.add(arr);
             }
             start += 3;
-
+ 
             if (isOutOfIndex) {
                 break;
             }
@@ -117,8 +117,8 @@ public class HeartRateAnalysis {
 
         // TODO: 合并相邻时间段
         logger.info("深睡眠时间段: {}", timeList);
-        for(int[] arr: timeList){
-            logger.info("深睡眠时间段: {}, 时长{}", arr, arr[1] - arr[0]);
+        for (int[] arr : timeList) {
+            logger.info("深睡眠时间段: {}, 时长 {}s", arr, arr[1] - arr[0]);
         }
     }
 
@@ -143,7 +143,7 @@ public class HeartRateAnalysis {
             }
         }
 
-        double lowerPercent = lowerCount / (double)totalSize;
+        double lowerPercent = lowerCount / (double) totalSize;
         // 超过 80%心率符合区间,则认为是平稳的睡眠
         boolean isSteay = lowerPercent >= 0.8D ? true : false;
 
