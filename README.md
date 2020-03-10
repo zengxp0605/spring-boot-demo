@@ -43,6 +43,10 @@
   - `09_rpc_dubbo/dubbo-client` 服务消费者(web服务,api) `consumer`
   - `09_rpc_dubbo/base-interface` 公开基础接口
 
+- 13-springboot-strategy
+  - springboot注解实现策略模式 @Autowired
+
+
 ## 参考: 
 - [Spring Boot 系列文章](http://www.ityouknow.com/spring-boot.html)  
 - [https://github.com/ityouknow/spring-boot-examples](https://github.com/ityouknow/spring-boot-examples);

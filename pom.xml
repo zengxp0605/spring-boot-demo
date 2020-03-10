@@ -34,6 +34,7 @@
         <module>10_mytask</module>
         <module>0_project_template</module>
         <module>12-sleep-algorithm</module>
+        <module>13-springboot-strategy</module>
     </modules>
 
     <dependencies>

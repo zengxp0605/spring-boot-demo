@@ -1,6 +1,6 @@
 package com.jason.thread.runnabledemo;
 
-public class TestThread {
+public class CTestThread {
 
     public static void main(String args[]) {
         RunnableDemo R1 = new RunnableDemo("Thread-1");
