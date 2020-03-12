@@ -31,20 +31,20 @@ public class MysqlConn {
             System.out.println(" 实例化Statement对象...");
             stmt = conn.createStatement();
             String sql;
-            sql = "SELECT id, name, url FROM websites";
+            sql = "SELECT * FROM user_info";
             ResultSet rs = stmt.executeQuery(sql);
 
             // 展开结果集数据库
             while(rs.next()){
                 // 通过字段检索
-                int id  = rs.getInt("id");
+                int uid  = rs.getInt("uid");
                 String name = rs.getString("name");
-                String url = rs.getString("url");
+                String username = rs.getString("username");
 
                 // 输出数据
-                System.out.print("ID: " + id);
-                System.out.print(", 站点名称: " + name);
-                System.out.print(", 站点 URL: " + url);
+                System.out.print("UID: " + uid);
+                System.out.print(", name: " + name);
+                System.out.print(", username: " + username);
                 System.out.print("\n");
             }
             // 完成后关闭
