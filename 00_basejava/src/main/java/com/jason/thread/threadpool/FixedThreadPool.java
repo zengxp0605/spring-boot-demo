@@ -7,6 +7,8 @@ public class FixedThreadPool {
     public static void main(String[] args) {
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
 
+        FixedThreadPool fixedThreadPool1 = new FixedThreadPool();
+
         for (int i = 0; i < 10; i++) {
             final int index = i;
 
@@ -16,6 +18,7 @@ public class FixedThreadPool {
                     try {
                         System.out.println(Thread.currentThread().getName() + " -->index: " + index);
                         Thread.sleep(2000);
+                        fixedThreadPool1.test();
                     } catch (InterruptedException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
@@ -27,4 +30,7 @@ public class FixedThreadPool {
         System.out.println("end, 适合线程数: " + Runtime.getRuntime().availableProcessors());
     }
 
+    private void test(){
+        System.out.println("test");
+    }
 }

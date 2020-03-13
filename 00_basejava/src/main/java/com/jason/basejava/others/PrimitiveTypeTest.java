@@ -109,5 +109,4 @@ public class PrimitiveTypeTest {
         printDefaultValues();
         test1();
     }
-
 }
