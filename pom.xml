@@ -24,7 +24,7 @@
 
     <modules>
         <module>00_basejava</module>
-        <module>01_hello</module>
+        <module>01_helloworld</module>
         <module>02_jpa</module>
         <module>03_redis</module>
         <module>04_mybatis</module>
@@ -36,9 +36,10 @@
         <module>09_rpc_dubbo</module>
         <module>10_mytask</module>
         <module>0_project_template</module>
+        <module>11_my_annotation</module>
         <module>12-sleep-algorithm</module>
         <module>13-springboot-strategy</module>
-        <module>01_helloworld</module>
+        <module>14-swagger-loggers</module>
     </modules>
 
     <dependencyManagement>
@@ -71,6 +72,14 @@
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
