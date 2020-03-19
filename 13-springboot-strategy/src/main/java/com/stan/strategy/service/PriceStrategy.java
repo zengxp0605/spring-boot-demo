@@ -6,6 +6,6 @@ public interface PriceStrategy {
     /**
      * 通用行为
      * @return
-     */c
+     */
     BigDecimal calculatePrice();
 }

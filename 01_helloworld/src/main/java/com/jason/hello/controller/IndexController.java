@@ -15,7 +15,7 @@ public class IndexController {
 
     @GetMapping(path = "/getJson")
     @ResponseBody
-    public JSONObject getJson(){
+    public Object getJson(){
         JSONObject jsonObject = JSONObject.parseObject("{\"date\":\"2019-07-24 17:44:19\", \"id\":1, \"string\":\"fastjson test\"}");
         return jsonObject;
     }
