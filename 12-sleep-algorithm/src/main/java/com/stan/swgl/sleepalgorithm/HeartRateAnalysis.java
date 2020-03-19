@@ -263,7 +263,7 @@ public class HeartRateAnalysis {
      * 以行为单位读取文件，常用于读面向行的格式化文件
      */
     private void initListByFile(String fileName) {
-        String path = "D:\\work\\workspace\\mydemo\\12-sleep-algorithm\\target\\classes\\debugData\\" + fileName;
+        String path = "D:\\work\\workspace\\spring-boot-mydemo\\12-sleep-algorithm\\target\\classes\\debugData\\" + fileName;
 
         File file = new File(path);
         BufferedReader reader = null;
