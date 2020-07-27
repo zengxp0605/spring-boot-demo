@@ -46,6 +46,12 @@
 - 13-springboot-strategy
   - springboot注解实现策略模式 @Autowired
 
+- 15-application-event
+  - 事件监听的方式，解藕业务逻辑
+  
+- 16-quartz
+  - 定时任务
+
 
 ## 参考: 
 - [Spring Boot 系列文章](http://www.ityouknow.com/spring-boot.html)  

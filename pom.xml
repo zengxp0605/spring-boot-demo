@@ -40,6 +40,8 @@
         <module>12-sleep-algorithm</module>
         <module>13-springboot-strategy</module>
         <module>15-application-event</module>
+        <module>16-quartz</module>
+        <module>17-multi-thread</module>
         <!--        <module>14-swagger-loggers</module>-->
 
     </modules>
@@ -65,10 +67,10 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-log4j12</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
