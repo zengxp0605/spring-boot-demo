@@ -1,5 +1,6 @@
 package com.jason.myannotation.controller;
 
+import com.jason.myannotation.annotations.LogManage;
 import com.jason.myannotation.entity.User;
 import com.jason.myannotation.service.TableGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class IndexController {
     private TableGenerator tableGenerator;
 
     @RequestMapping("/")
+    @LogManage(value = "test", desc = "首页日志")
     public String index() {
         File file = new File(""); // 设定为当前文件夹
         String classPath = "";
