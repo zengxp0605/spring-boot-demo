@@ -21,13 +21,13 @@ public class LogManageAware{
 
     }
 
-    @Around("log(lggg)")
-    public Object round(ProceedingJoinPoint pjp, LogManage lggg) throws Throwable {
+    @Around("log(lggg2)")
+    public Object round(ProceedingJoinPoint pjp, LogManage lggg2) throws Throwable {
 
         Object result = pjp.proceed(pjp.getArgs());
 
-        System.out.println("LogManageAware日志切面，val=" + lggg.value());
-        System.out.println("LogManageAware日志切面，desc=" + lggg.desc());
+        System.out.println("LogManageAware日志切面，val=" + lggg2.value());
+        System.out.println("LogManageAware日志切面，desc=" + lggg2.desc());
 
         return result;
     }
