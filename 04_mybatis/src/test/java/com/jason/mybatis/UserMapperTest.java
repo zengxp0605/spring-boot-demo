@@ -5,6 +5,7 @@ import com.jason.mybatis.enums.UserSexEnum;
 import com.jason.mybatis.mapper.UserMapper;
 import com.jason.mybatis.model.User;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,16 @@ import java.util.List;
 @SpringBootTest
 public class UserMapperTest {
 
-    @Autowired  // TODO: 报错??
+    @Autowired
     private UserMapper userMapper;
+
+    public static int originalCount = 0;
+
+    @Before
+    public void setup(){
+        int size = userMapper.getAll().size();
+        originalCount = size;
+    }
 
     @Test
     public void testInsert() throws Exception{
@@ -27,13 +36,13 @@ public class UserMapperTest {
         userMapper.insert(new User("bb1", "b123456", UserSexEnum.WOMAN));
         userMapper.insert(new User("cc1", "b123456", UserSexEnum.WOMAN));
 
-        Assert.assertEquals(3, userMapper.getAll().size());
+        Assert.assertEquals(3 + originalCount, userMapper.getAll().size());
     }
 
     @Test
     public void testQuery() throws ExportException{
         List<User> users = userMapper.getAll();
-        System.out.println(users.toString());
+        Assert.assertNotNull(users);
     }
 
     @Test

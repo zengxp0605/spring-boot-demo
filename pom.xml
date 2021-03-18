@@ -42,6 +42,7 @@
         <module>15-application-event</module>
         <module>16-quartz</module>
         <module>17-multi-thread</module>
+        <module>18-lock</module>
         <!--        <module>14-swagger-loggers</module>-->
 
     </modules>

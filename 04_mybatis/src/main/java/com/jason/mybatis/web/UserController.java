@@ -1,11 +1,11 @@
 package com.jason.mybatis.web;
 
-import com.jason.mybatis.enums.UserSexEnum;
-import com.jason.mybatis.mapper.UserMapper;
 import com.jason.mybatis.model.User;
+import com.jason.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserMapper userMapper;
+    private UserService userService;
 
     @RequestMapping("/")
     public List<User> home() {
@@ -23,32 +23,22 @@ public class UserController {
 
     @RequestMapping("/getUsers")
     public List<User> getUsers() {
-        List<User> users = userMapper.getAll();
-        return users;
+        return userService.getUsers();
     }
 
     @RequestMapping("/getUser")
-    public User getUser(Long id) {
-        User user = userMapper.getOne(id);
-        return user;
+    public User getUser(@RequestParam(name = "id") Long id) {
+        return userService.getUser(id);
     }
 
     @RequestMapping("/add")
     public String save(User user) {
-
-       long effRows = userMapper.insert(user);
-       return "Last uid: " + user.getId();
-    }
-
-    @RequestMapping(value = "update")
-    public void update(User user) {
-        userMapper.update(user);
+        return userService.save(user);
     }
 
     @RequestMapping(value = "/delete/{id}")
-    public void delete(@PathVariable("id") Long id) {
-        userMapper.delete(id);
+    public String delete(@PathVariable("id") Long id) {
+        userService.delete(id);
+        return "删除用户id: " + id;
     }
-
-
 }
